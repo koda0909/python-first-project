@@ -1,67 +1,67 @@
-# # 클래스 정의(선언) : 붕어빵 틀
-# class User:
-#     def __init__ (self, name): # 생성자 : 클래스가 셍성될때 자동으로 호출
-#         self.name = name # 변수를 초기화 
+# 클래스 정의(선언) : 붕어빵 틀
+class User:
+    def __init__ (self, name): # 생성자 : 클래스가 셍성될때 자동으로 호출
+        self.name = name # 변수를 초기화 
 
-#     def show(self): # 메서드(Method)
-#         return f"회원 이름 {self.name}"
+    def show(self): # 메서드(Method)
+        return f"회원 이름 {self.name}"
 
-# # 인스턴스 생성 : 붕어빵 만들기
-# user_a = User("손흥민")
-# user_b = User("이강인")
+# 인스턴스 생성 : 붕어빵 만들기
+user_a = User("손흥민")
+user_b = User("이강인")
 
-# # user 클래스로 생성한 인스턴스 (메모리에 생성)
+# user 클래스로 생성한 인스턴스 (메모리에 생성)
 
-# # 클래스의 인스턴스 변수
-# print(user_a.name)
-# print(user_b.name)
+# 클래스의 인스턴스 변수
+print(user_a.name)
+print(user_b.name)
 
-# # 클래스의 메서드 접근
-# print(user_a.show())
-# print(user_b.show())
+# 클래스의 메서드 접근
+print(user_a.show())
+print(user_b.show())
 
 
-# print(type(user_a))
-# print(user_a is user_b)
-# print(id(user_a))
-# print(id(user_b))
+print(type(user_a))
+print(user_a is user_b)
+print(id(user_a))
+print(id(user_b))
 
-# # =============================
+# =============================
 
-# class Monitor:
-#     def display_info(self):
-#         # 인스턴스 변수
-#         self.resolution = "1920x1080"
-#         self.size = "27인치"
-#         print(f"모니터 정보\n해상도: {self.resolution}\n크기: {self.size}\n객체 ID: {id(self)}")
+class Monitor:
+    def display_info(self):
+        # 인스턴스 변수
+        self.resolution = "1920x1080"
+        self.size = "27인치"
+        print(f"모니터 정보\n해상도: {self.resolution}\n크기: {self.size}\n객체 ID: {id(self)}")
 
-# monitor = Monitor() # 인스턴스 생성 (모니터 객체 생성)
-# print(id(monitor))  # 모니터 인스턴스의 ID 출력
+monitor = Monitor() # 인스턴스 생성 (모니터 객체 생성)
+print(id(monitor))  # 모니터 인스턴스의 ID 출력
 
-# monitor.display_info()
+monitor.display_info()
 
-# # =============================
-# class Smartphone:
-#     def __init__(self, model):
-#         self.model = model # 속성 (Attribute)
-#         self.battery = 50 # 속성 (Attribute)
+# =============================
+class Smartphone:
+    def __init__(self, model):
+        self.model = model # 속성 (Attribute)
+        self.battery = 50 # 속성 (Attribute)
 
-#     def charge(self, amount):
-#         self.battery += amount
-#         if self. battery > 100:
-#             self.battery = 100
-#             print(f"배터리 충전 완료 : {self.battery}%")
-#         else:
-#             print(f"배터리 충전 중 ... : {self.battery}%")
+    def charge(self, amount):
+        self.battery += amount
+        if self. battery > 100:
+            self.battery = 100
+            print(f"배터리 충전 완료 : {self.battery}%")
+        else:
+            print(f"배터리 충전 중 ... : {self.battery}%")
 
-# phone_a = Smartphone("아이폰")
-# print(phone_a.model)
-# phone_a.charge(30)
-# phone_a.charge(30)
+phone_a = Smartphone("아이폰")
+print(phone_a.model)
+phone_a.charge(30)
+phone_a.charge(30)
 
-# phone_b = Smartphone("갤럭시")
+phone_b = Smartphone("갤럭시")
 
-# 은행 계좌 클래스
+은행 계좌 클래스
 
 class BankAccount:
     def __init__ (self, owner, balance):
